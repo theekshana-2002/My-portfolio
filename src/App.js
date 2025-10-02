@@ -312,13 +312,23 @@ export default function App() {
         <h2 className="section__title">About Me</h2>
         <div className="card">
           <p>
-            I am Chamodh Theekshana Rathnayake, an enthusiastic and dedicated undergraduate
-            currently pursuing a four-year Software Engineering degree at SLIIT. I completed my
-            schooling at Sri Rahula College, Katugastota, and previously worked as a trainee at Bank
-            of Ceylon (BOC), gaining valuable professional experience. I am equipped with the
-            technical skills to work with a range of modern technologies, including Artificial
-            Intelligence applications. I am adaptable to various environments and capable of
-            working independently or collaboratively to achieve goals effectively.
+            I'm Chamodh Theekshana Rathnayake, an enthusiastic Software Engineering undergraduate at
+            SLIIT, passionate about building modern, user-friendly, and impactful software solutions.
+            With hands-on experience in web and mobile app development, I've worked on projects
+            ranging from management systems to mobile apps, using technologies like Java, Kotlin,
+            React, Node.js, MongoDB, and SQL.
+          </p>
+          <p>
+            I also bring professional exposure from my time as a Trainee at Bank of Ceylon (BOC),
+            where I developed communication, teamwork, and time management skills in a fast-paced
+            environment. I enjoy solving problems, adapting to new challenges, and continuously
+            learning to stay ahead in the ever-evolving tech industry.
+          </p>
+          <p>
+            Beyond coding, I value creativity, adaptability, and problem-solving, which help me
+            approach projects with a balance of technical expertise and innovative thinking. My goal
+            is to grow into a versatile software engineer who creates solutions that make a real
+            difference.
           </p>
         </div>
       </section>
