@@ -1,0 +1,212 @@
+/* Simple Background Animation */
+.simple-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Animated gradient background */
+.gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at top left, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at top right, rgba(167, 139, 250, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(167, 139, 250, 0.1) 0%, transparent 50%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  animation: gradientShift 20s ease infinite;
+}
+
+/* Floating particles */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(6, 182, 212, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(6, 182, 212, 0.8);
+  animation: floatUp 15s linear infinite;
+}
+
+.particle-1 {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  top: 30%;
+  left: 80%;
+  animation-delay: -2s;
+  background: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 0 6px rgba(167, 139, 250, 0.8);
+}
+
+.particle-3 {
+  top: 50%;
+  left: 10%;
+  animation-delay: -4s;
+}
+
+.particle-4 {
+  top: 70%;
+  left: 90%;
+  animation-delay: -6s;
+  background: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 0 6px rgba(167, 139, 250, 0.8);
+}
+
+.particle-5 {
+  top: 20%;
+  left: 60%;
+  animation-delay: -8s;
+}
+
+.particle-6 {
+  top: 80%;
+  left: 40%;
+  animation-delay: -10s;
+  background: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 0 6px rgba(167, 139, 250, 0.8);
+}
+
+.particle-7 {
+  top: 40%;
+  left: 30%;
+  animation-delay: -12s;
+}
+
+.particle-8 {
+  top: 60%;
+  left: 70%;
+  animation-delay: -14s;
+  background: rgba(167, 139, 250, 0.6);
+  box-shadow: 0 0 6px rgba(167, 139, 250, 0.8);
+}
+
+/* Animated orbs */
+.orbs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.3), rgba(6, 182, 212, 0.1));
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  animation: floatUp 25s linear infinite;
+}
+
+.orb-1 {
+  width: 60px;
+  height: 60px;
+  top: 20%;
+  left: 10%;
+  animation-duration: 20s;
+}
+
+.orb-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  left: 80%;
+  animation-duration: 30s;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.3), rgba(167, 139, 250, 0.1));
+  box-shadow: 0 0 25px rgba(167, 139, 250, 0.3);
+}
+
+.orb-3 {
+  width: 40px;
+  height: 40px;
+  top: 80%;
+  left: 20%;
+  animation-duration: 18s;
+}
+
+.orb-4 {
+  width: 70px;
+  height: 70px;
+  top: 10%;
+  left: 70%;
+  animation-duration: 22s;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.2), rgba(167, 139, 250, 0.05));
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.2);
+}
+
+/* Keyframe animations */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%, 100% 50%, 0% 50%, 100% 50%;
+  }
+  25% {
+    background-position: 25% 25%, 75% 75%, 25% 75%, 75% 25%;
+  }
+  50% {
+    background-position: 50% 0%, 50% 100%, 50% 100%, 50% 0%;
+  }
+  75% {
+    background-position: 75% 75%, 25% 25%, 75% 25%, 25% 75%;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .simple-background {
+    display: none;
+  }
+  
+  .gradient-bg {
+    animation: none;
+  }
+  
+  .particle,
+  .orb {
+    animation: none;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .particle-5,
+  .particle-6,
+  .particle-7,
+  .particle-8,
+  .orb-3,
+  .orb-4 {
+    display: none;
+  }
+}
