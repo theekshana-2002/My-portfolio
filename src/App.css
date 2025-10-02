@@ -558,6 +558,34 @@ a:hover { text-decoration: underline; }
   transition: color 0.3s ease;
 }
 
+/* Education */
+.edu-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.edu-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.edu-period {
+  color: var(--muted);
+  margin: 0.15rem 0 0 0;
+  font-size: 0.9rem;
+}
+
 .card:hover p {
   color: var(--text);
 }
@@ -1120,6 +1148,11 @@ a:hover { text-decoration: underline; }
   }
   .form-submit {
     align-self: stretch;
+  }
+  /* Education: smaller logos on mobile */
+  .edu-logo {
+    width: 36px;
+    height: 36px;
   }
 }
 

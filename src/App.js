@@ -336,16 +336,34 @@ export default function App() {
       {/* Education */}
       <section id="education" className="section container">
         <h2 className="section__title">Education</h2>
-        <div className="card" style={{ marginBottom: '1rem' }}>
-          <h3>Sri Rahula College, Katugastota</h3>
-          <p>2008 – 2021</p>
+        <div className="card edu-card" style={{ marginBottom: '1rem' }}>
+          <div className="edu-header">
+            <img
+              className="edu-logo"
+              src={`${process.env.PUBLIC_URL}/logos/sri-rahula.png`}
+              alt="Sri Rahula College logo"
+            />
+            <div>
+              <h3>Sri Rahula College, Katugastota</h3>
+              <p className="edu-period">2008 – 2021</p>
+            </div>
+          </div>
           <p>
             Advanced Level (Commerce Stream) – Econ (B), Business (B), Accounts (C)
           </p>
         </div>
-        <div className="card">
-          <h3>Sri Lanka Institute of Information Technology (SLIIT)</h3>
-          <p>2023 – Present</p>
+        <div className="card edu-card">
+          <div className="edu-header">
+            <img
+              className="edu-logo"
+              src={`${process.env.PUBLIC_URL}/logos/sliit.png`}
+              alt="SLIIT logo"
+            />
+            <div>
+              <h3>Sri Lanka Institute of Information Technology (SLIIT)</h3>
+              <p className="edu-period">2023 – Present</p>
+            </div>
+          </div>
           <p>BSc (Hons) in Software Engineering</p>
         </div>
       </section>
