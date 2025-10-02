@@ -333,6 +333,23 @@ export default function App() {
         </div>
       </section>
 
+      {/* Education */}
+      <section id="education" className="section container">
+        <h2 className="section__title">Education</h2>
+        <div className="card" style={{ marginBottom: '1rem' }}>
+          <h3>Sri Rahula College, Katugastota</h3>
+          <p>2008 – 2021</p>
+          <p>
+            Advanced Level (Commerce Stream) – Econ (B), Business (B), Accounts (C)
+          </p>
+        </div>
+        <div className="card">
+          <h3>Sri Lanka Institute of Information Technology (SLIIT)</h3>
+          <p>2023 – Present</p>
+          <p>BSc (Hons) in Software Engineering</p>
+        </div>
+      </section>
+
       {/* Skills */}
       <section id="skills" className="section section--alt">
         <div className="container">
